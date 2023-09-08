@@ -1,0 +1,39 @@
+{% extends 'layouts/based.html' %}
+
+{% block title %}{{title}}{% endblock  %}
+
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to INEC vitural plartform</h1>
+  <h2>Pulling Units</h2>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Pulling unit name</th>
+        <th scope="col">Pulling unit number</th>
+        <th scope="col">description</th>
+        {% comment %} <th scope="col">lat</th> {% endcomment %}
+        <th scope="col">LGA</th>
+        <th scope="col">State</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for pulling in pullinguint %}
+        <tr>
+            <th>{{pulling.polling_unit_name}}</th>
+            <td>{{pulling.polling_unit_number}}</td>
+            <td>{{pulling.polling_unit_description}}</td>
+            {% comment %} <td>{{pulling.lat}}</td> {% endcomment %}
+            <td>{{ pulling.lga_id.lga_name }}</td>
+            <td>{{ pulling.lga_id.state_id.state_name }} State</td>
+          </tr>
+          {% endfor %}
+     
+    </tbody>
+  </table>
+</div>
+    
+
+{% endblock  %}

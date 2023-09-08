@@ -1,0 +1,40 @@
+{% extends 'layouts/based.html' %}
+
+{% block title %}{{title}}{% endblock  %}
+
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to INEC vitural plartform</h1>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Pulling unit name</th>
+        <th scope="col">Party</th>
+        <th scope="col">Scors</th>
+        {% comment %} <th scope="col">lat</th> {% endcomment %}
+        <th scope="col">LGA</th>
+        {% comment %} <th scope="col">State</th> {% endcomment %}
+      </tr>
+    </thead>
+    <tbody>
+        {% for r in announcedpresults %}
+        <tr>
+          <th>{{r.polling_unit_uniqueid.polling_unit_name}}</th>
+          <th>{{r.party_abbreviation}}</th>
+            <th>{{r.party_score}}</th>
+            <th>{{r.polling_unit_uniqueid.lga_id.lga_name}}</th>
+           
+            
+          </tr>
+          {% endfor %}
+     
+    </tbody>
+  </table>
+</div>
+
+    
+
+{% endblock  %}

@@ -1,0 +1,54 @@
+{% extends 'layouts/based.html' %}
+
+{% block title %}{{title}}{% endblock  %}
+
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to INEC vitural plartform</h1>
+  <h2>Pulling Units</h2>
+
+<form action="#">
+ <select name="" id="">
+  <option value="">Selete Pulling unit</option>
+  {% for pullingunit in pullingunit %}
+  <option value="{{ polling_unit_id }}">{{ pullingunit.polling_unit_name }}</option>    
+  {% endfor %}
+    
+ </select>
+ <select>
+  <option value="">Party</option>
+  
+  {% for p in party %}
+    <option value="{{ p.partyid }}">{{ p.partyname }} </option>
+  {% endfor %}
+    
+ </select>
+ <select>
+  <option value="">LGA</option>
+  
+  {% for lga in lga %}
+    <option value="{{ lga.lga_id }}">{{ lga.lga_name }} </option>
+  {% endfor %}
+    
+ </select>
+ <select>
+  <option value="">Ward</option>
+  
+  {% for w in ward %}
+  <option value="{{ w.ward_id }}">{{ w.ward_name }}</option>
+    
+  {% endfor %}
+    
+ </select>
+ <input type="text" name="party_score">
+
+ <input type="submit" value="Submit">
+ <div>
+  <p>This forn wasn't completed due to time please</p>
+ </div>
+</form>
+</div>
+    
+
+{% endblock  %}
