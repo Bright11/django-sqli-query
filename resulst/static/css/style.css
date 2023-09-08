@@ -62,12 +62,30 @@ form input, select{
     outline: none;
     margin: 8px 0px;
 }
-@media (max-width:900px){
-    nav{
-        flex-direction: column;
-        }
-        
-        nav ul{
-            flex-direction: column;
-        }
+
+.mybtnmobile{
+ 
+   margin: 0px 10px;
+   border: none;
+   background-color: black;
+   color: white;
+   width: 60px;
+   height: 60px;
+   border-radius: 100%;
+   cursor: pointer !important;
+   
 }
+/* @media (max-width:900px){
+    .mobile{
+     display: block !important;
+    }
+         nav{
+             align-items: unset;
+             position: relative;
+         }
+         
+         
+        
+ 
+         
+     } */
