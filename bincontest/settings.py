@@ -80,22 +80,17 @@ DATABASES = {
        # 'ENGINE': 'django.db.backends.sqlite3',
        'ENGINE':'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
-        # 'NAME':'bincontest',
-          'NAME':'bizi05tvf4olxjg3q83n',
-        # 'USER':'root',
-         'USER':'ulcrxeymg7v9xvpi',
-        # 'HOST':'localhost',
-         'HOST':'bizi05tvf4olxjg3q83n-mysql.services.clever-cloud.com',
-        # 'PORT':3306,
+         'NAME':'bincontest',
+        'USER':'root',
+         'HOST':'localhost',
          'PORT':3306,
         # 'PASSWORD':'',
-        'PASSWORD':'R9Dou7rl0gb1csuIn7Lu',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
     }
 }
-# you have to install install mysqlclient using pip
+# you have to install mysqlclient; install mysqlclient using pip
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
